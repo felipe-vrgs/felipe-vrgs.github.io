@@ -1,8 +1,17 @@
+---
+import { site } from '../data/site'
+---
+
 <footer>
   <span>
-    &copy; {new Date().getFullYear()} Your Blog.
-    Powered by <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>.
-    Template by <a href="https://www.twitter.com/Charca" target="_blank" rel="noopener">Maxi Ferreira</a>.
+    &copy; {new Date().getFullYear()} {site.title} by {site.author}.
+  </span>
+  <span class="links">
+    <a href={site.social.github} target="_blank" rel="noopener">GitHub</a>
+    <span class="sep">·</span>
+    <a href={site.social.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+    <span class="sep">·</span>
+    <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>
   </span>
 </footer>
 
@@ -15,5 +24,14 @@
     padding: 1em 2em;
     text-align: center;
     width: 100%;
+  }
+
+  .links {
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+
+  .sep {
+    padding: 0 0.5em;
   }
 </style>

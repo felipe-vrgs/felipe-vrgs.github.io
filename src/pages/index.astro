@@ -1,16 +1,37 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site'
 
-const title = 'My Astro Blog';
-const description = 'The perfect starter for your perfect blog.';
+const title = site.title
+const description = site.description
 const permalink = Astro.site.href;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink}>
   <div class="home-container">
     <div class="home-copy">
-      <h1>Welcome to your new Astro Blog</h1>
-      <p>Check out the docs on <a href="https://www.github.com/Charca/astro-blog-template" target="_blank" rel="noopener">GitHub</a> to get started.</p>
+      <h1>{site.title}</h1>
+      <p>
+        I’m {site.author}, a software engineer. I write about building reliable
+        systems, AI-assisted coding, and what breaks in the real world.
+      </p>
+      <p>
+        Start with
+        <a href="/blog/castle-of-sand">Castles Built on Sand</a>
+        or browse
+        <a href="/blog">the blog</a>.
+        You can also find me on
+        <a href={site.social.github} target="_blank" rel="noopener">GitHub</a>
+        and
+        <a
+          href={site.social.linkedin}
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn
+        </a>
+        .
+      </p>
     </div>
 
     <div class="hero-image-container">

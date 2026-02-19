@@ -1,7 +1,37 @@
+---
+import { site } from '../data/site'
+---
+
+<a class="logo" href="/">
+  <img
+    alt={`${site.title} logo`}
+    src="/assets/logo.webp"
+    width="75"
+    height="50"
+  />
+  <span class="title">{site.title}</span>
+</a>
+
 <style>
+  .logo {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    gap: 12px;
+    text-decoration: none;
+  }
+
   img {
     display: block;
     width: 75px;
+  }
+
+  .title {
+    font-family: var(--font-family-sans);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 
   @media screen and (max-width: 520px) {
@@ -10,7 +40,3 @@
     }
   }
 </style>
-
-<a href="/">
-  <img alt="Blog Logo" src="/assets/logo.webp" width="75" height="50" />
-</a>

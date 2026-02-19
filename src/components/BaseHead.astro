@@ -2,6 +2,7 @@
 import { ClientRouter } from 'astro:transitions'
 import '../styles/fonts.css'
 import '../styles/global.css'
+import { site } from '../data/site'
 
 export interface Props {
   title: string
@@ -10,6 +11,7 @@ export interface Props {
 }
 
 const { title, description, permalink } = Astro.props
+const fullTitle = title === site.title ? site.title : `${title} | ${site.title}`
 const socialUrl = Astro.site.href + 'assets/social.png'
 ---
 
@@ -19,21 +21,21 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title} />
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={permalink} />
-<meta property="og:title" content={title} />
+<meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={socialUrl} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={permalink} />
-<meta property="twitter:title" content={title} />
+<meta property="twitter:title" content={fullTitle} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={socialUrl} />
 
