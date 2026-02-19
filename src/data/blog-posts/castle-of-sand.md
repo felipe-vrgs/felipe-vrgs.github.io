@@ -1,9 +1,11 @@
 ---
 title: "Castles Built on Sand: The Reality of AI Coding"
+slug: castle-of-sand
+publishDate: 19 Feb 2026
 description: "Why faster code generation is exposing the same old engineering failures."
-pubDate: 2026-02-19
-heroImage: "../../assets/blog-placeholder-1.jpg"
 ---
+
+![Casual 3D illustration](/assets/blog/casual-life-3d-workspace.webp)
 
 If you only look at output, it already feels like Dario Amodei might be right.
 
@@ -25,8 +27,7 @@ Still, it was not the revolution many were claiming. The gains were real but con
 
 Our repositories followed consistent architectural principles. Features were well segmented. Context windows were usually sufficient to capture a full flow. When they were not, the gaps were small enough for a human to quickly step in and fix.
 
-Under those conditions, AI felt like a junior engineer on demand. Helpful,
-sometimes impressive, but far from autonomous.
+Under those conditions, AI felt like a junior engineer on demand. Helpful, sometimes impressive, but far from autonomous.
 
 The newest models released this year are better. They make fewer obvious mistakes, and I can safely delegate more than before. Progress is undeniable. But the narrative that we are close to fully automating software engineering does not match what actually happens in real projects.
 
@@ -65,3 +66,4 @@ But tools do not change physics.
 You can build faster than ever before. You can ship more than ever before. You can even impress people for a while.
 
 **But if the foundation is sand, the rain is undefeated.**
+
