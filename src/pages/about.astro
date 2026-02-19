@@ -11,13 +11,14 @@ const permalink = `${Astro.site.href}about`;
   <div class="container">
     <h1>About</h1>
     <figure class="about-image">
-      <img src="/assets/about-illustration.webp" alt="Illustration of a notebook" width="330">
-      <figcaption>
-        Illustration by
-        <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
-        from
-        <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a>
-      </figcaption>
+      <img
+        src="/assets/about-illustration.webp"
+        alt="A desk setup with monitors, keyboard, and headphones"
+        width="330"
+        height="184"
+        loading="lazy"
+        decoding="async"
+      >
     </figure>
     <p>
       I’m {site.author}. I like turning messy problems into systems that are
@@ -48,7 +49,7 @@ const permalink = `${Astro.site.href}about`;
   .about-image {
     float: right;
     margin: -3em -7em 2em 2em;
-    max-width: 300px;
+    max-width: 330px;
   }
 
   .about-image img {
